@@ -1,0 +1,35 @@
+{
+  "name": "publish-guard",
+  "version": "1.0.0",
+  "description": "Stops Claude from typing private terms into the browser or writing them into your publishing files, and keeps a log of what it blocked",
+  "author": { "name": "Build Alone" },
+  "homepage": "https://buildalone.co/mods",
+  "license": "MIT",
+  "userConfig": {
+    "blocked_terms": {
+      "type": "string",
+      "title": "Blocked terms",
+      "description": "Comma-separated words, names or domains that must never go out (case-insensitive). Stored in your settings; never shown in the pane or messages.",
+      "default": ""
+    },
+    "allowed_terms": {
+      "type": "string",
+      "title": "Allowed terms",
+      "description": "Comma-separated exceptions. These are ignored before checking, e.g. a Korean name you credit on purpose.",
+      "default": ""
+    },
+    "guarded_paths": {
+      "type": "string",
+      "title": "Guarded paths",
+      "description": "Comma-separated pieces of a file path. A Write or Edit to a path containing any of them is checked.",
+      "default": "/publishing/"
+    },
+    "block_non_latin": {
+      "type": "string",
+      "title": "Block a script",
+      "description": "korean also blocks Korean text (minus allowed terms) from going out.",
+      "default": "off",
+      "options": ["off", "korean"]
+    }
+  }
+}

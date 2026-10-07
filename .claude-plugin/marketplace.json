@@ -1,0 +1,37 @@
+{
+  "name": "buildalone-mods",
+  "owner": {
+    "name": "Build Alone",
+    "url": "https://buildalone.co"
+  },
+  "metadata": {
+    "description": "Claude Code mods built for a solo creator's daily workflow."
+  },
+  "plugins": [
+    {
+      "name": "credit-meter",
+      "source": "./plugins/credit-meter",
+      "description": "ElevenLabs characters and Higgsfield credits in a pane, with a toast before and after a tool call spends them."
+    },
+    {
+      "name": "youtube-pulse",
+      "source": "./plugins/youtube-pulse",
+      "description": "Your channel's latest videos and view counts, with the gain since you last looked."
+    },
+    {
+      "name": "routine-watch",
+      "source": "./plugins/routine-watch",
+      "description": "A dashboard for scheduled routines that write to a Notion database: today's haul, the last 7 days, quiet sources and next runs."
+    },
+    {
+      "name": "publish-guard",
+      "source": "./plugins/publish-guard",
+      "description": "Blocks Claude from typing or writing your private terms into the browser or your publishing files."
+    },
+    {
+      "name": "record-mode",
+      "source": "./plugins/record-mode",
+      "description": "/record on masks emails, phone numbers, money and your own terms on screen while you record."
+    }
+  ]
+}

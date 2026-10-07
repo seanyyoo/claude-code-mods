@@ -1,0 +1,24 @@
+{
+  "name": "record-mode",
+  "version": "1.0.0",
+  "description": "While you record your screen, /record on masks emails, phone numbers, money and your own private terms in the transcript",
+  "author": { "name": "Build Alone" },
+  "homepage": "https://buildalone.co/mods",
+  "license": "MIT",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "extra_terms": {
+      "type": "string",
+      "title": "Extra terms to mask",
+      "description": "Comma-separated words, names or domains to mask too (case-insensitive).",
+      "default": ""
+    },
+    "mask_korean": {
+      "type": "string",
+      "title": "Mask Korean text",
+      "description": "on also masks Korean text.",
+      "default": "off",
+      "options": ["off", "on"]
+    }
+  }
+}

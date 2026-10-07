@@ -1,0 +1,46 @@
+{
+  "name": "routine-watch",
+  "version": "1.0.0",
+  "description": "Your scheduled routines at a glance from a Notion database: today's haul by source, the last 7 days, sources that went quiet and next runs",
+  "author": { "name": "Build Alone" },
+  "homepage": "https://buildalone.co/mods",
+  "license": "MIT",
+  "userConfig": {
+    "notion_view_url": {
+      "type": "string",
+      "title": "Notion view URL",
+      "description": "Required. The saved view of the database your routines write to, as view://… (ask Claude to fetch the database with the Notion MCP and copy the view URL). Sort the view newest first.",
+      "default": ""
+    },
+    "notion_server": {
+      "type": "string",
+      "title": "Notion MCP server",
+      "description": "The name of your Notion MCP server or connector, as /mcp lists it. The mod also tries \"notion\".",
+      "default": "claude.ai Notion"
+    },
+    "date_property": {
+      "type": "string",
+      "title": "Date property",
+      "description": "The date property each row is counted by.",
+      "default": "Date Collected"
+    },
+    "source_property": {
+      "type": "string",
+      "title": "Source property",
+      "description": "The property that names where a row came from.",
+      "default": "Source"
+    },
+    "sources": {
+      "type": "string",
+      "title": "Sources",
+      "description": "Comma-separated values of the source property to chart. A source with no rows this week is flagged as possibly broken.",
+      "default": "YouTube,Reddit,News,X,LinkedIn"
+    },
+    "routines": {
+      "type": "string",
+      "title": "Routines",
+      "description": "Comma-separated Name@HH:MM (24-hour, local time) for each routine's daily run, e.g. Daily Collector@06:00,Writer@21:00. Empty hides the next-run rows.",
+      "default": ""
+    }
+  }
+}

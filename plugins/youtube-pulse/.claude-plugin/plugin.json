@@ -1,0 +1,22 @@
+{
+  "name": "youtube-pulse",
+  "version": "1.0.0",
+  "description": "Your channel's latest videos and view counts, with gains since you last looked",
+  "author": { "name": "Build Alone" },
+  "homepage": "https://buildalone.co/mods",
+  "license": "MIT",
+  "userConfig": {
+    "channel_id": {
+      "type": "string",
+      "title": "YouTube channel ID",
+      "description": "Required. Your channel ID, the one that starts with UC (YouTube Studio → Settings → Channel → Advanced settings). Not your @handle.",
+      "default": ""
+    },
+    "count": {
+      "type": "number",
+      "title": "Videos to show",
+      "description": "How many of your latest videos the card lists (1 to 15; the RSS feed holds 15).",
+      "default": 6
+    }
+  }
+}

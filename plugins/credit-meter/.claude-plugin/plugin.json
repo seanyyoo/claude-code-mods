@@ -1,0 +1,23 @@
+{
+  "name": "credit-meter",
+  "version": "1.0.0",
+  "description": "ElevenLabs characters and Higgsfield credits at a glance, with a heads-up before a tool call spends them",
+  "author": { "name": "Build Alone" },
+  "homepage": "https://buildalone.co/mods",
+  "license": "MIT",
+  "userConfig": {
+    "elevenlabs_api_key": {
+      "type": "string",
+      "title": "ElevenLabs API key",
+      "description": "Optional. Leave empty to use the ELEVENLABS_API_KEY environment variable, or the key your ElevenLabs MCP server is configured with in ~/.claude.json.",
+      "default": "",
+      "sensitive": true
+    },
+    "higgsfield_server": {
+      "type": "string",
+      "title": "Higgsfield MCP server",
+      "description": "The name of your Higgsfield MCP server or connector, as /mcp lists it. The mod also tries \"higgsfield\".",
+      "default": "claude.ai Higgsfield"
+    }
+  }
+}
